@@ -15,7 +15,7 @@ def upload_file():
         return jsonify({'error': 'No selected file'}), 400
     
     if file:
-        file.save('uploaded_audio.wav')  # Save the file to disk
+        file.save('uploadedaudio.wav')  # Save the file to disk
         
     sr=44100
     with AudioFile('uploaded_audio.wav').resampled_to(sr) as f:
